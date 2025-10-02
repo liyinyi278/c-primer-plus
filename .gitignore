@@ -1,0 +1,50 @@
+# ---------- CMake / 构建目录 ----------
+build/          
+compile_commands.json
+
+# ---------- Clangd 缓存 ----------
+.cache/ 
+
+# ---------- 编译器/系统临时文件 ----------
+_msvc_*.hpp  
+*.idx
+*.d
+
+# ---------- 其他通用临时文件（可选补充） ----------
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo
