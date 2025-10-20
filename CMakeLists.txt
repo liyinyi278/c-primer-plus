@@ -57,16 +57,16 @@ target_include_directories(${TARGET_NAME} PRIVATE
 )
 
 
-# 编译警告配置（关键补充）
-target_compile_options(${TARGET_NAME} PRIVATE
-    # GCC/Clang 警告
-    $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wall -Wextra -Wpedantic>
-    # MSVC 警告
-    $<$<CXX_COMPILER_ID:MSVC>:/W4>
-    # C编译器警告（与C++规则一致，可合并）
-    $<$<OR:$<C_COMPILER_ID:GNU>,$<C_COMPILER_ID:Clang>>:-Wall -Wextra -Wpedantic>
-    $<$<C_COMPILER_ID:MSVC>:/W4>
-)
+# # 编译警告配置（关键补充）
+# target_compile_options(${TARGET_NAME} PRIVATE
+#     # GCC/Clang 警告
+#     $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wall -Wextra -Wpedantic>
+#     # MSVC 警告
+#     $<$<CXX_COMPILER_ID:MSVC>:/W4>
+#     # C编译器警告（与C++规则一致，可合并）
+#     $<$<OR:$<C_COMPILER_ID:GNU>,$<C_COMPILER_ID:Clang>>:-Wall -Wextra -Wpedantic>
+#     $<$<C_COMPILER_ID:MSVC>:/W4>
+# )
 
 # 编译器编码配置：同时支持GCC和MSVC
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
