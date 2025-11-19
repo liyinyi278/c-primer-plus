@@ -5,16 +5,16 @@ int main(void) {
   const int ORIGINAL_FRIENDS = 5;
 
   int friends = ORIGINAL_FRIENDS;
-  int days = 0;
+  int weeks = 0;
 
   while (friends < DUNBARS_NUMBER) {
-    days++;
-    friends = (friends - days) * 2;
+    weeks++;
+    friends = (friends - weeks) * 2;
 
-    printf("Day%3d: %3d friends\n", days, friends);
+    printf("Week%3d: %3d friends\n", weeks, friends);
   }
 
-  printf("It took %d days to reach Dunbar's number.\n", days);
+  printf("It took %d weeks to reach Dunbar's number.\n", weeks);
 
   return 0;
 }
