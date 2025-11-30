@@ -1,0 +1,17 @@
+Hello, World!
+
+My name is John Doe.
+
+I am 25 years old.
+
+I live in New York City.
+
+I work as a software engineer.
+
+I enjoy playing soccer and hiking.
+
+I have two siblings.
+
+I am a vegetarian.
+
+I love to read books and watch movies.
