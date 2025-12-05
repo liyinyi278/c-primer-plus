@@ -1,0 +1,27 @@
+下面是这个多文件程序的运行示例： 
+
+Enter the number of the desired hotel: 
+1) Fairfield Arms 2) Hotel Olympic 
+3) Chertworthy Plaza 4) The Stockton 
+5) quit 
+
+【输入】3 
+How many nights are needed? 【输入】1 
+The total cost will be $255.00. 
+
+Enter the number of the desired hotel: 
+1) Fairfield Arms 2) Hotel Olympic 
+3) Chertworthy Plaza 4) The Stockton 
+5) quit 
+
+【输入】4 
+How many nights are needed? 【输入】3 
+The total cost will be $1012.64. 
+
+Enter the number of the desired hotel: 
+1) Fairfield Arms 2) Hotel Olympic 
+3) Chertworthy Plaza 4) The Stockton 
+5) quit 
+
+【输入】5 
+Thank you and goodbye.
