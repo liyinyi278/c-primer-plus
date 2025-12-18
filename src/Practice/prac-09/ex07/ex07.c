@@ -32,7 +32,7 @@ void print_str_info(void) {
       if (next == EOF) {
         break;
       }
-      ungetc(next, stdin);  /* 将回车键放回输入流中 */
+      ungetc(next, stdin);  /* 将回车键后一个字符，放回输入流中 */
       continue;
     }
 
