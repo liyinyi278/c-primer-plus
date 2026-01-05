@@ -38,7 +38,7 @@ int main(void) {
     程序中的fgets()一次读入STLEN-1个字符，（该例中为9个字符）。
     所以，一开始它只读入了“By the wa”，并储存为“By the wa\0”。
     接着fputs()打印该字符串，而且并未换行。
-    然后while循环进入下一轮迭代，fgets()继续从剩余的输入中读入数气，即读入“y, the ge”并储存为“y, the ge\0”。
+    然后while循环进入下一轮迭代，fgets()继续从剩余的输入中读入数据，即读入“y, the ge”并储存为“y, the ge\0”。
     接着fputs()打印该字符串，而且并未换行。
     这个过程一直持续到读入“tion\n”。fgets()将其储存为“tion\n\0”，fputs()打印该字符串，
     由于字符串中的\n，光标被移至下一行开始处。
