@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void copy_array(double src[], double dest[], int size);
+void copy_array(double dest[], double src[], int size);
 void print_array(double array[], int size);
 
 int main(void) {
@@ -10,7 +10,7 @@ int main(void) {
   printf("Source array: ");
   print_array(src, 5);
 
-  copy_array(src + 2, dest, 3);
+  copy_array(dest, src + 2, 3);
 
   printf("Destination array: ");
   print_array(dest, 3);
@@ -18,7 +18,7 @@ int main(void) {
   return 0;
 }
 
-void copy_array(double src[], double dest[], int size) {
+void copy_array(double dest[], double src[], int size) {
   for (int i = 0; i < size; i++) {
     dest[i] = src[i];
   }
