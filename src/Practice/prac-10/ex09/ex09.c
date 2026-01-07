@@ -1,3 +1,5 @@
+/* 变长数组的应用 */
+
 #include <stdio.h>
 
 void copy_array(const int row, const int col, double dest[row][col],
