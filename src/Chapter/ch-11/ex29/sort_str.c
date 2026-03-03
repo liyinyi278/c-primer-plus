@@ -12,7 +12,7 @@
 
     选择排序伪代码：
       for n = 首元素至 n = 倒数第 2 个元素，
-        找出剩余元素中的最大值，并将其放在第n个元素中（内层for循环）
+        找出剩余元素中的最小值，并将其放在第n个元素中（内层for循环）
       外层循环指明正在处理数组的哪一个元素，内层循环找出应储存在该元素的值。
 
     提醒：C库中有一个更高级的排序函数：qsort()。
@@ -41,7 +41,7 @@ int main(void) {
   char input[LIM][SIZE]; // 储存输入的数组
   char *pt_str[LIM];     // 内含指针变量的数组，指向输入的字符串
   int count = 0;         // 输入计数
-  int k;                 // 输出计数
+  int k = 0;                 // 输出计数
 
   printf("Input up to %d lines, and I will sort them.\n", LIM);
   printf("To stop, press the Enter key at a line's start.\n");
