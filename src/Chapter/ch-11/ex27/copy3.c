@@ -28,14 +28,14 @@
 #include <stdio.h>
 #include <string.h>
 
-#define SIZE 40
-#define TARGSIZE 7
-#define LIM 5
+#define SIZE 40     // 输入缓冲区大小
+#define TARGSIZE 7  // 目标数组每行容量（含结尾\0）
+#define LIM 5       // 需要输入的单词数量
 
 char *s_gets(char *st, int n);
 
 int main(void) {
-  char qwords[LIM][TARGSIZE];
+  char qwords[LIM][TARGSIZE] = {0};
   char temp[SIZE];
   int i = 0;
 
@@ -51,8 +51,16 @@ int main(void) {
   }
 
   puts("Here are the words accepted:");
-  for (i = 0; i < LIM; i++)
-    puts(qwords[i]);
+  /* 
+      for (i = 0; i < LIM; i++)
+        puts(qwords[i]);
+
+    以上代码存在严重错误：
+      无论实际输入多少单词，固定循环 LIM（5）次。
+      若输入不足5个，qwords剩余位置将是未初始化的内存垃圾值！
+  */
+  for (int j = 0; j < i; j++)
+    puts(qwords[j]);
 
   return 0;
 }

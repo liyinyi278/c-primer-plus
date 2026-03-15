@@ -32,7 +32,7 @@
 
 #define SIZE 81 // 字符串最大长度,包括'\0'
 #define LIM 20  // 可读入的最多行数
-#define HALT "" // 结束输入的字符串
+// #define HALT "" // 结束输入的字符串
 
 void str_sort(char *strings[], int num);
 char *s_gets(char *st, int n);
@@ -41,7 +41,7 @@ int main(void) {
   char input[LIM][SIZE]; // 储存输入的数组
   char *pt_str[LIM];     // 内含指针变量的数组，指向输入的字符串
   int count = 0;         // 输入计数
-  int k = 0;                 // 输出计数
+  int k = 0;             // 输出计数
 
   printf("Input up to %d lines, and I will sort them.\n", LIM);
   printf("To stop, press the Enter key at a line's start.\n");
@@ -85,9 +85,11 @@ void str_sort(char *strings[], int num) {
 
   for (top = 0; top < num - 1; top++) {
     for (seek = top + 1, min_index = top; seek < num; seek++) {
-      if (strcmp(strings[top], strings[seek]) > 0) {
+      if (strcmp(strings[min_index], strings[seek]) > 0) {
         min_index = seek;
       }
+    }
+    if (min_index != top) {
       temp = strings[top];
       strings[top] = strings[min_index];
       strings[min_index] = temp;

@@ -1,5 +1,8 @@
 /*
     程序功能：修改字符串
+
+    测试数据：
+      Me? You talkin' to me? Get outta here!
 */
 
 #include <ctype.h>
@@ -9,17 +12,23 @@
 #define LIMIT 81
 
 void ToUpper(char *);
-int PunctCount(char *);
+int PunctCount(const char *);
 
 int main(void) {
   char line[LIMIT];
   char *find;
 
   puts("Please enter a line:");
-  fgets(line, LIMIT, stdin);
-  find = strchr(line, '\n');
-  if (find)
-    *find = '\0';
+  if(fgets(line, LIMIT, stdin)){
+    perror("Input error");
+    return 1;
+  }
+
+  // find = strchr(line, '\n');
+  // if (find)
+  //   *find = '\0';
+  line[strcspn(line, "\n")] = '\0';
+
   ToUpper(line);
   puts(line);
   printf("That line has %d punctuation characters.\n", PunctCount(line));
@@ -29,15 +38,15 @@ int main(void) {
 
 void ToUpper(char *str) {
   while (*str) {
-    *str = toupper(*str);
+    *str = toupper((unsigned char)*str);
     str++;
   }
 }
 
-int PunctCount(char *str) {
+int PunctCount(const char *str) {
   int count = 0;
   while (*str) {
-    if (ispunct(*str))
+    if (ispunct((unsigned char)*str))
       count++;
     str++;
   }
